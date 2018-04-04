@@ -1,24 +1,21 @@
 # Academical Portfolio Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a Ruby on Rails 5 web application that posts Academic events such as Conference, Seminar etc.
 
-Things you may want to cover:
+  ### Features
 
-* Ruby version
+  - Real time Post engine for events
+  - Posts
+  - Categories of Post
 
-* System dependencies
+  ### Code Example
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  ```ruby
+  def my_great_method
+     puts "here it is"
+   end
+  ```   
+  
+  ```javascript
+  alert('Hi there');
+  ```
