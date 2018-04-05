@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   # GET /posts
   # GET /posts.json
@@ -61,14 +61,14 @@ class PostsController < ApplicationController
     end
   end
   
-  def toggle_status
-    if @blog.draft?
-      @blog.published!
-    elsif @blog.published?
-      @blog.draft!
+ def toggle_status
+    if @post.draft?
+      @post.published!
+    elsif @post.published?
+      @post.draft!
     end
         
-    redirect_to blogs_url, notice: 'Post status has been updated.'
+    redirect_to posts_url, notice: 'Post status has been updated.'
   end
 
   private

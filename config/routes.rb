@@ -16,10 +16,10 @@ Rails.application.routes.draw do
    #get 'pages/facilitators'
   
   resources :posts do
-      member do
-       get :toggle_status
-    end
-  end
-  
-   root to: 'pages#home' 
+    member do 
+	    get :toggle_status
+	  end
+    end 	  
+
+  root to: 'pages#home' 
 end
