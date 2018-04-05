@@ -2,7 +2,24 @@ class PortfoliosController < ApplicationController
   def index
     @portfolio_items = Portfolio.all
   end
-
+    
+	def facilitators
+    @facilitators_portfolio_items = Portfolio.facilitators
+  end
+	
+	def equipment_managers
+    @equipment_managers_portfolio_items = Portfolio.equipment_managers
+  end
+	
+	def training_managers
+    @training_managers_portfolio_items = Portfolio.training_managers
+  end
+	
+	def event_manager
+    @event_manager_portfolio_items = Portfolio.event_manager
+  end
+	
+	
   def new
     @portfolio_item = Portfolio.new
   end
