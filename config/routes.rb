@@ -15,7 +15,11 @@ Rails.application.routes.draw do
    #get 'pages/eventmanagers'
    #get 'pages/facilitators'
   
-  resources :posts
+  resources :posts do
+      member do
+       get :toggle_status
+    end
+  end
   
    root to: 'pages#home' 
 end
