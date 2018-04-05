@@ -1,30 +1,21 @@
 Rails.application.routes.draw do
   resources :categories
-  resources :portfolios
-  get 'pages/home'
-
-  get 'pages/about'
-
-  get 'pages/managers'
-
-  get 'pages/advertise'
-
-  get 'pages/event'
-
-  get 'pages/library'
-
-  get 'pages/contact'
+  resources :portfolios, except: [:show]
+  get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   
-  get 'pages/trainers'
+  get 'about', to: 'pages#about'
+  get 'managers', to: 'pages#managers'
+  get 'advertise', to: 'pages#advertise'
+  get 'event', to: 'pages#event'
+  get 'library', to: 'pages#library'
+  get 'contact', to: 'pages#contact'
+    
+   #get 'pages/trainers'
+   #get 'pages/equipmentproviders'
+   #get 'pages/eventmanagers'
+   #get 'pages/facilitators'
   
-  get 'pages/equipmentproviders'
-  
-  get 'pages/eventmanagers'
-  
-  get 'pages/facilitators'
-  
-  
-
   resources :posts
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+   root to: 'pages#home' 
 end
