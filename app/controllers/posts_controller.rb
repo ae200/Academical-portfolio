@@ -61,7 +61,7 @@ class PostsController < ApplicationController
     end
   end
   
-   def toggle_status
+ def toggle_status
     if @post.draft?
       @post.published!
     elsif @post.published?
