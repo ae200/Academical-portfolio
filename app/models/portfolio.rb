@@ -1,5 +1,8 @@
 class Portfolio < ApplicationRecord
-  validates_presence_of :title, :body, :main_image, :thumb_image, :contact, :job_id
+  has_many :technologies
+  belongs_to :job    
+  include Placeholder
+  validates_presence_of :title, :subtitle, :body, :main_image, :thumb_image, :contact, :job_id
   belongs_to :job 
   
   def self.facilitators
