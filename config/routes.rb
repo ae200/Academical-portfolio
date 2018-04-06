@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   resources :categories
   resources :portfolios, except: [:show]
+  get 'facilitators-items', to: 'portfolios#facilitators'
+  get 'training_managers-items', to: 'portfolios#training_managers'
+  get 'equipment_managers-items', to: 'portfolios#equipment_managers'
+  get 'event_manager-items', to: 'portfolios#event_manager'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+
+  
   
   get 'about', to: 'pages#about'
   get 'managers', to: 'pages#managers'

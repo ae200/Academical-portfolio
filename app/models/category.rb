@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
+     validates_presence_of :name, :description	
      has_many :posts
-	 validates_presence_of :name, :description	 
 end

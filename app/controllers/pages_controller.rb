@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def home
      @posts = Post.all
 	 @categories = Category.all
+	 @jobs = Job.all
   end
 
   def about
