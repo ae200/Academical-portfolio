@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20180408195428) do
     t.text "body"
     t.text "main_image"
     t.text "thumb_image"
-    t.string "contact"
+    t.text "contact"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "job_id"
