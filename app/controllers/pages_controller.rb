@@ -1,25 +1,23 @@
 class PagesController < ApplicationController
-  def home
+    def home
      @posts = Post.all
 	 @categories = Category.all
 	 @jobs = Job.all
-  end
+    end
 
-  def about
-  end
+    def about
+    end
 
-  def managers
-  end
+    def managers
+    end
 
-  def advertise
-  end
+    def advertise
+    end
 
-  def event
-  end
+    def event
+  
+    end
 
-  def library
-  end
-
-  def contact
-  end
+    def contact
+    end
 end
