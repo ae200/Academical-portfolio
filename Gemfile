@@ -55,3 +55,5 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+
+gem 'threesmart_view_tool', git: 'https://github.com/ae200/threesmart_view_tool'

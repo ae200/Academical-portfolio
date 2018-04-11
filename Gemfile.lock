@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/ae200/threesmart_view_tool
+  revision: 1541a19d071befb3a21c79ff075bc4bbdb5da17a
+  specs:
+    threesmart_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -206,6 +212,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  threesmart_view_tool!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

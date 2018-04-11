@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
- end
+  
+  def copyright_generator
+     ThreeSmartViewTool::Renderer.copyright 'Engineering Conference Global Platform', 'All rights reserved'
+  end
+end
