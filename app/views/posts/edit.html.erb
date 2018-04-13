@@ -2,5 +2,5 @@
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Show', @post if logged_in?(:site_admin) %> |
+<%= link_to 'Back', posts_path if logged_in?(:site_admin) %>

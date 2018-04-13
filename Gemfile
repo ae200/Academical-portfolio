@@ -58,3 +58,5 @@ gem 'jquery-rails'
 
 gem 'threesmart_view_tool', '~> 0.1.0'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+
+gem 'bootstrap-modal-rails'

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'event_manager-items', to: 'portfolios#event_manager'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
-  
+    
   
   get 'about', to: 'pages#about'
   get 'managers', to: 'pages#managers'
@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get 'event', to: 'pages#event'
   get 'library', to: 'pages#library'
   get 'contact', to: 'pages#contact'
+  
+  get "concerns/new_contact" => 'concerns#new_contact', :as => :new_contact
     
    #get 'pages/trainers'
    #get 'pages/equipmentproviders'

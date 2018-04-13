@@ -11,15 +11,21 @@
   </head>
 
   <body>
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
+     <div id="wrapper">
+	    <div id="header-wrapper">
+		   <div id="header">
 	 
 	<%= login_helper %> 
 		
     <%= yield %>
 	
-	<%= render "shared/nav", location: 'bottom' %>
+	
+	<%= render "shared/post_nav" %>
 	
 	<%= source_helper("post") %>
+	   </div>
+	</div>
+  </div> 
+	
   </body>
 </html>

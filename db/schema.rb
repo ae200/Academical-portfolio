@@ -62,7 +62,15 @@ ActiveRecord::Schema.define(version: 20180412005351) do
     t.string "slug"
     t.integer "status", default: 0
     t.bigint "category_id"
-    t.index ["category_id"], name: "index_posts_on_category_id"
+	t.text "timings"
+    t.text "fees" 
+	t.text "footfall"
+    t.text "concurrent"
+	t.text "editions"
+    t.text "organizer"
+	t.text "venue"
+	t.text "main_image"
+	t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 

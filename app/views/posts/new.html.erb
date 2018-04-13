@@ -2,4 +2,4 @@
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path if logged_in?(:site_admin) %>

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<%= image_tag @post.main_image %>
 
 <p>
   <strong>Theme:</strong>
@@ -10,5 +10,93 @@
   <%= @post.body %>
 </p>
 
+<hr>
+
+      <div class="container">
+          <div class="row row-content">
+            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+             <p style="padding:20px;">
+              <strong align=right>Fees:</strong>        
+               <%= @post.fees %>
+             </p>
+	      </div>
+       </div>
+    <div class="container">
+          <div class="row row-content">
+            <div class="class="col-xs-12 col-sm-3">
+             <p style="padding:20px;">
+              <strong align=left>Timings:</strong>        
+               <%= @post.timings %>
+             </p>
+	      </div>
+     </div>
+    <div class="container">
+          <div class="row row-content">
+            <div class="col-xs-12 col-sm-3">
+             <p style="padding:20px;">
+              <strong align=left>Footfall:</strong>        
+               <%= @post.footfall %>
+             </p>
+	      </div>
+     </div>
+	 <div class="container">
+          <div class="row row-content">
+            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+             <p style="padding:20px;">
+              <strong align=right>Concurrent Events:</strong>        
+               <%= @post.concurrent %>
+             </p>
+	      </div>
+       </div>
+	 <div class="container">
+          <div class="row row-content">
+            <div class="col-xs-12 col-sm-3">
+             <p style="padding:20px;">
+              <strong align=left>Editions:</strong>        
+               <%= @post.editions %>
+             </p>
+	      </div>
+     </div>
+     <div class="container">
+          <div class="row row-content">
+            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+               <strong align=center><%= link_to 'Contact', new_contact_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} %></strong>        
+              <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                        <div class="modal-content"></div>
+  			      </div>
+          </div>
+     </div>  
+   </div>
+</div>
+   
+   
+  <hr>	 
+
+   <div class="container">
+          <div class="row row-content">
+            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+             <p style="padding:20px;">
+              <strong align=right>Organizer:</strong>        
+               <%= @post.organizer %>
+             </p>
+	      </div>
+       </div> 
+ </div> 
+
+<hr>
+
+<div class="container">
+          <div class="row row-content">
+            <div class="class="col-xs-12 col-sm-3">
+             <p style="padding:20px;">
+              <strong align=left>Venue Map & Directions:</strong>        
+               
+             </p>
+	      </div>
+       </div> 
+ </div>  
 <%= link_to 'Edit', edit_post_path(@post) if logged_in?(:site_admin) %> |
 <%= link_to 'Back', posts_path %>
+ <%= link_to '<button type="button">New Post</button>'.html_safe, new_post_path if logged_in?(:site_admin) %>
+ 
