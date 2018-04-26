@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412005351) do
+ActiveRecord::Schema.define(version: 20180416155049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,18 +59,20 @@ ActiveRecord::Schema.define(version: 20180412005351) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
     t.integer "status", default: 0
     t.bigint "category_id"
-	t.text "timings"
-    t.text "fees" 
-	t.text "footfall"
+    t.text "timings"
+    t.text "fees"
+    t.text "footfall"
     t.text "concurrent"
-	t.text "editions"
+    t.text "editions"
     t.text "organizer"
-	t.text "venue"
-	t.text "main_image"
-	t.index ["category_id"], name: "index_posts_on_category_id"
+    t.text "venue"
+    t.text "main_image"
+    t.string "slug"
+	t.text "contact"
+	t.text "iframe"
+    t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 

@@ -5,5 +5,18 @@ class ApplicationController < ActionController::Base
   include CurrentUserConcern
   include DefaultPageContent
   include NewContact
-end	   
+  helper_method :all_categories
+  helper_method :all_jobs
+ 
+  
+  def all_categories
+	@categories = Category.all
+  end
+  
+  def all_jobs
+	@jobs = Job.all
+  end
+  
+   
+end
 

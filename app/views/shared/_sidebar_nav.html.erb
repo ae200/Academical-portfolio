@@ -1,0 +1,29 @@
+<div id="sidebar">
+					<ul>
+						<li>
+							<div id="search" >
+								
+							</div>
+							<div style="clear: both;">&nbsp;</div>
+						</li>
+						<li>
+							<h2>Categories</h2>
+							<ul>
+								<% all_categories.each do |cat| %>
+									<li><%= link_to cat.name,category_path(:id => cat.id) %></li>
+								<% end %>
+					
+							</ul>
+						</li>
+						<li>
+							<h2>Our Managers</h2>
+							<ul>
+								<% all_jobs.each do |job| %>
+									<li><%= link_to job.title,job_path(:id => job.id) %></li>
+								<% end %>
+							</ul>
+						</li>
+						
+					</ul>
+				</div>
+				<!-- end #sidebar -->

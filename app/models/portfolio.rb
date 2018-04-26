@@ -1,5 +1,4 @@
 class Portfolio < ApplicationRecord
-  has_many :technologies
   belongs_to :job
     
   include Placeholder
@@ -22,7 +21,7 @@ class Portfolio < ApplicationRecord
     where(subtitle: 'Event Manager')
   end
 
-  scope :event_manager_portfolio_items, -> { where(subtitle: 'Event Manager') }
+  scope :event_manager_portfolios, -> { where(subtitle: 'Event Manager') }
   
    after_initialize :set_defaults
 

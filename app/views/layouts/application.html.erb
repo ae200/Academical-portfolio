@@ -1,30 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-    <title><%= @page_title %></title>
-    <%= csrf_meta_tags %>
-	
-	<meta name="keywords" content="<%= @seo_keywords %>" />
+<%= render "shared/header_nav" %>
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+				<div class="flash-message">
+				<% flash.each do |key,value| %>
+				<p><%= value %></p>
+				<% end %>
+				</div>
+				<%= yield %><!--main view-->
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<%= render "shared/sidebar_nav" %>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		 <%= render "shared/application_footer" %> 
+		 <%= source_helper("application") %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-     <div class="site-wrapper">
-	    <div class="site-wrapper-inner">
-		   <div class="cover-container">
-	 
-	          <%= render "shared/application_nav" %>
-	 	 	    
-	         <%= yield %>
-	         <%= render "shared/application_footer" %>    
-	         <%= source_helper("application") %>
-          </div>
-       </div>
-     </div>
-  </body>
+	</div>
+</div>
+<!-- end #footer -->
+</body>
+</body>
 </html>
+
+

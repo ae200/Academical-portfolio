@@ -1,24 +1,14 @@
 <h2>Categories</h2>
 
-<p id="notice"><%= notice %></p>
-
-<hr>
-
-<div>
-  <% @categories.each do |category| %>
-    <div class="content">
-
-      <p><%= category.name %></p>
-
-      <p><%= category.description %></p>
-
-      <p><%= link_to 'Show', category %></p>
-      <p><%= link_to 'Edit', edit_category_path(category) %></p>
-      <p><%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    </div>
+<ul>
+  <li><% @categories.each do |category| %></li>
+      
+ <li><%= link_to category.name, category %></li>
+    
+   <%= link_to 'Edit', edit_category_path(category) if logged_in?(:site_admin)%>
+   <%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)%>
+   
   <% end %>
-</div>
+</ul>
 
-<br>
-
-<%= link_to 'Create a New Category', new_category_path %>
+<%= link_to 'Create a New Category', new_category_path  if logged_in?(:site_admin)%>

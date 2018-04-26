@@ -4,6 +4,9 @@ class Post < ApplicationRecord
 	extend FriendlyId
     friendly_id :theme, use: :slugged
 	
+	
+	
+	
 	include Placeholder 
 	validates_presence_of :theme, :body, :timings, :fees, :footfall, :concurrent, :editions, :organizer, :venue
 	belongs_to :category
@@ -19,7 +22,7 @@ class Post < ApplicationRecord
   after_initialize :set_defaults
   
   def set_defaults
-    self.main_image ||= Placeholder.image_generator(height: '2000', width: '300')
+    self.main_image ||= Placeholder.image_generator(height: '600', width: '300')
  end
 	
 end

@@ -1,6 +1,7 @@
 <h1>Editing Post</h1>
 
 <%= render 'form', post: @post %>
+@categories = Category.all
 
 <%= link_to 'Show', @post if logged_in?(:site_admin) %> |
 <%= link_to 'Back', posts_path if logged_in?(:site_admin) %>

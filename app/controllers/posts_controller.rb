@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+	@category = Category.all
   end
 
   # GET /posts/1/edit
@@ -29,7 +30,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
+    @post.category_id = params[:category_id]
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -79,7 +80,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:theme, :body, :timings, :fees, :footfall, :concurrent, :editions, :organizer, :venue)
+      params.require(:post).permit(:theme, :body, :timings, :fees, :footfall, :concurrent, :editions, :organizer, :venue, :category_id, :contact, :iframe)
     end
 
 end

@@ -1,6 +1,50 @@
-<h1>Contact Us</h1>
-<p><%= number_to_phone "+2348081234589" %></p>
+<h1 align=center>Contact Us</h1>
+<div class="post">
+      <div class="col-md-6">
+         <h3 >Office Address</h3>
+           <p>7150 E Camelback Rd, Suite 444, Scottsdale, AZ 85251</p>
+           <h3>Phone</h3>
+            <p><%= number_to_phone "US +1 281 876 7436, Nigeria +234 8036981301" %></p>
+            <h3>Email</h3>
+            <p><a href="mailto:info@engineeringconference.com.ng?subject=Contact" "email me">Email me</a> </p>
+       </div>
+	   
+	<form>
+         <label for="inputName3" class="col-sm-4 col-form-label">Name</label>
+         <div class="col-sm-10">
+           <input type="name" class="form-control" id="inputname3" placeholder="Name">
+      </div>
+     
+	 <label for="inputEmail3" class="col-sm-4 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputemail3" placeholder="Email">
+    </div>
+    	  
+       <label for="inlineFormCustomSelect" class="col-sm-4 col-form-label">Why Contacting?</label>
+        <div class="col-sm-10">
+		<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <option selected>Choose...</option>
+        <option value="1">Advertisement</option>
+        <option value="2">Posting Engineering Events</option>
+        <option value="3">Partnership</option>
+		<option value="4">General Enquiries</option>
+      </select>
+     </div>
+     
+	 <label for="exampleFormControlTextarea1" align=center>Message</label>
+	<div class="col-sm-10">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+  </div>
 
-<p><%= number_to_currency "15675" %></p>
+	<div class="col-sm-10">
+      <button type="submit" class="btn btn-primary" >Submit</button>
+    </div>
+  
+  </form>
+	   
+</div>
 
-<p><%= number_with_delimiter "122348081234589" %></p>
+<hr>
+<div class="col-md-6">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5604.407320016366!2d3.3597640742948083!3d6.65752848654141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd80c3b04510b2dc9!2sAdeoni+Estate!5e0!3m2!1sen!2sng!4v1523674777729" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
