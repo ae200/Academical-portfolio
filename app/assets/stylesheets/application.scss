@@ -64,10 +64,11 @@ a:hover {
 
 #header-wrapper {
 	height: 160px;
+	
 }
 
 #header {
-	width: 1030px;
+	width: 1110px;
 	margin: 0 auto;
 	padding: 0px 0px 0px 0px;
 }
@@ -421,7 +422,10 @@ a:hover {
 	color: #847F7E;
 }
 
-form label{width:110px;display:inline-block;}
+.form label{
+width:200px;
+display:inline-block;
+}
 
 
 /*
@@ -429,6 +433,7 @@ form label{width:110px;display:inline-block;}
  */
 
 .card-block {
+  width: 500;
   color: #000000;
   text-align: left;
 }
@@ -437,12 +442,21 @@ form label{width:110px;display:inline-block;}
   color: #000000;
 }
 
-#register-text {
+.action{
+
+}
+
+.register-text {
   text-align: right;
 }
 
-#login > .card {
+.password_confirmation-text{
+ text-align: left;
+
+}
+
+.login > .card {
   width: 22rem;
   margin: 0 auto;
   float: none;
-}
+ }
