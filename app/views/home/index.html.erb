@@ -1,10 +1,13 @@
 <% @posts.each do |post| %>
 <div class="post">
 <h2 class="theme"><%= link_to post.theme,post %></h2>
+<div class="byline">
+			<p class="meta">Published <%= distance_of_time_in_words(post.created_at, Time.now) %> ago</p>
+			<small class="onging text-success">
+			</small>
+	</div>
 	<div class="entry"><%= truncate post.body, length: 160 %></div>
 	<div class="entry"><%= link_to 'read more', post %></div>
-	<div class="byline">
-			<p class="meta">Published <%= distance_of_time_in_words(post.created_at, Time.now) %> ago</p>
-	</div>
+	
 </div>
 <% end %>

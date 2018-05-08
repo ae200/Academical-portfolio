@@ -2,7 +2,12 @@
 					<ul>
 						<li>
 							<div id="search" >
-								
+								<form method="get" action="#">
+									<div>
+										<input type="text" name="s" id="search-text" value="" />
+										<input type="submit" id="search-submit" value="GO" />
+									</div>
+								</form>
 							</div>
 							<div style="clear: both;">&nbsp;</div>
 						</li>
@@ -15,15 +20,6 @@
 					
 							</ul>
 						</li>
-						<li>
-							<h2>Our Managers</h2>
-							<ul>
-								<% all_jobs.each do |job| %>
-									<li><%= link_to job.title,job_path(:id => job.id) %></li>
-								<% end %>
-							</ul>
-						</li>
-						
-					</ul>
-				</div>
+				</ul>
+		</div>
 				<!-- end #sidebar -->

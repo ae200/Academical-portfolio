@@ -64,15 +64,14 @@ ActiveRecord::Schema.define(version: 20180416155049) do
     t.text "timings"
     t.text "fees"
     t.text "footfall"
-    t.text "concurrent"
     t.text "editions"
     t.text "organizer"
     t.text "venue"
     t.text "main_image"
     t.string "slug"
 	t.text "contact"
-	t.text "iframe"
-    t.index ["category_id"], name: "index_posts_on_category_id"
+	t.text "period"
+	t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 

@@ -8,7 +8,7 @@ class Post < ApplicationRecord
 	
 	
 	include Placeholder 
-	validates_presence_of :theme, :body, :timings, :fees, :footfall, :concurrent, :editions, :organizer, :venue
+	validates_presence_of :theme, :body, :timings, :fees, :footfall, :editions, :organizer, :venue, :category_id, :period
 	belongs_to :category
 	
 	def self.special_posts

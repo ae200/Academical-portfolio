@@ -1,8 +1,17 @@
 <div class="card bg-dark text-white">
  <%= image_tag @post.main_image %>
   <div class="card-img-overlay">
-  <h5 class="card-title"><%= @post.theme %></h5>
+  <h2 class="card-title"><%= @post.theme %></h2>
+  <ul>
+  <li>
+   <span class="glyphicon glyphicon-map-marker"><h5 class="card-title"><%= @post.period %></h5></span>
+  
+   
+  </li>
+  <li>
   <h5 class="card-title"><%= @post.venue %></h5>
+  </li>
+  </ul>
   </div>
 </div>
 
@@ -68,11 +77,11 @@
          </div>
 		 </div>
         <div class="card-footer text-muted">
-    </div>
-</div>
+     </div>
+  </div>	
 
    
 <%= link_to 'Edit', edit_post_path(@post) if logged_in?(:site_admin) %> |
-<%= link_to 'Back', posts_path if logged_in?(:site_admin) %>
+
  <%= link_to '<button type="button">New Post</button>'.html_safe, new_post_path if logged_in?(:site_admin) %>
  
